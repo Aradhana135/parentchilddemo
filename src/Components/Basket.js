@@ -9,7 +9,7 @@ const Basket = ({ items, onClick }) => {
             {item.id}
           {item.name}:
           <button type="button" onClick={() => onClick(item)}>
-            {item.isFavorite ? 'Like' : 'Unlike'}
+            {item.is_Favorite ? 'Like' : 'Unlike'}
           </button>
         </li>
       ))}
