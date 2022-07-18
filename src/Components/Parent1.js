@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Basket from './Basket';
 function Parent1() {
   const [fruits, setFruits] = useState([
     { id: '1', name: 'Apple', isFavorite: false },
@@ -38,20 +39,20 @@ function Parent1() {
   );
 }
 
-function Basket({ items, onClick }) {
-  return (
-    <ul>
-      {items.map((item) => (
-        <li key={item.id}>
-            {item.id}
-          {item.name}:
-          <button type="button" onClick={() => onClick(item)}>
-            {item.isFavorite ? 'Like' : 'Unlike'}
-          </button>
-        </li>
-      ))}
-    </ul>
-  );
-}
+// function Basket() {
+//   return (
+//     <ul>
+//       {items.map((item) => (
+//         <li key={item.id}>
+//             {item.id}
+//           {item.name}:
+//           <button type="button" onClick={() => onClick(item)}>
+//             {item.isFavorite ? 'Like' : 'Unlike'}
+//           </button>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// }
 
 export default Parent1;
